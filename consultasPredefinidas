@@ -1,0 +1,65 @@
+-> Crea producto 1
+curl --request POST \
+  --url http://localhost:3000/product \
+  --data '{"title":"Microondas","price":80000,"marca":"LG"}'
+
+  
+-> Crea producto 2
+curl --request POST \
+  --url http://localhost:3000/product \
+  --data '{"title":"Heladera","price":80000,"marca":"LG"}'
+
+  
+-> Crea producto 3
+curl --request POST \
+  --url http://localhost:3000/product \
+  --data '{"title":"Heladera","price":80000,"marca":"LG"}'
+
+  
+-> Actualiza producto 3
+curl --request POST \
+  --url http://localhost:3000/product \
+  --data '{"title":"TV","price":80000,"marca":"LG"}'
+
+  
+-> Crea producto 4
+curl --request POST \
+  --url http://localhost:3000/product \
+  --data '{"title":"TV","price":80000,"marca":"LG"}'
+
+  
+-> Elimina producto 4
+curl --request DELETE \
+  --url http://localhost:3000/product/4
+
+  
+-> Agrega producto a carrito
+curl --request POST \
+  --url http://localhost:3000/cart/productos/3
+  
+curl --request POST \
+  --url http://localhost:3000/cart/productos/2
+  
+curl --request POST \
+  --url http://localhost:3000/cart/productos/3
+
+  
+-> Elimina producto de carrito
+curl --request DELETE \
+  --url http://localhost:3000/cart/productos/3
+
+
+-> Consulta carrito
+curl --request GET \
+  --url http://localhost:3000/cart
+  
+  
+-> Crea compra
+curl --request POST \
+  --url http://localhost:3000/order/ \
+  --data '{"deliveryAddress":"Av. Rivadavia 10000","deliveryDate":"2022-12-25"}'
+  
+  
+-> Busca compra
+curl --request GET \
+  --url http://localhost:3000/order
